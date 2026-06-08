@@ -19,10 +19,15 @@ const VideoCard = ({ video: { id: { videoId }, snippet }, layout }) => {
       gap: isHorizontal ? 1.5 : 0
     }}>
       <Link to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKmM` } style={{ flexShrink: 0 }}>
-        <CardMedia image={snippet?.thumbnails?.high?.url || demoThumbnailUrl} alt={snippet?.title} 
+        <CardMedia 
+          component="img"
+          image={snippet?.thumbnails?.high?.url || demoThumbnailUrl} 
+          alt={snippet?.title} 
           sx={{ 
             width: isHorizontal ? '168px' : '100%', 
-            height: isHorizontal ? '94px' : 200, 
+            height: isHorizontal ? '94px' : 'auto', 
+            aspectRatio: isHorizontal ? 'unset' : '16/9',
+            objectFit: 'cover',
             borderRadius: '12px' 
           }} 
         />
