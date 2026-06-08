@@ -19,7 +19,7 @@ const SearchFeed = () => {
       <Typography variant="h4" fontWeight={900}  color="white" mb={3} ml={{ sm: "100px"}}>
         Search Results for <span style={{ color: "#FC1503" }}>{searchTerm}</span> videos
       </Typography>
-      <Box display="flex" justifyContent="center">
+      <Box>
         {<Videos videos={videos} />}
       </Box>
     </Box>

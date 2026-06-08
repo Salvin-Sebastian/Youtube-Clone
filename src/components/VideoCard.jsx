@@ -19,18 +19,33 @@ const VideoCard = ({ video: { id: { videoId }, snippet }, layout }) => {
       gap: isHorizontal ? 1.5 : 0
     }}>
       <Link to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKmM` } style={{ flexShrink: 0 }}>
-        <CardMedia 
-          component="img"
-          image={snippet?.thumbnails?.high?.url || demoThumbnailUrl} 
-          alt={snippet?.title} 
-          sx={{ 
-            width: isHorizontal ? '168px' : '100%', 
-            height: isHorizontal ? '94px' : 'auto', 
-            aspectRatio: isHorizontal ? 'unset' : '16/9',
-            objectFit: 'cover',
-            borderRadius: '12px' 
-          }} 
-        />
+        <Box sx={{ position: 'relative' }}>
+          <CardMedia 
+            component="img"
+            image={snippet?.thumbnails?.high?.url || demoThumbnailUrl} 
+            alt={snippet?.title} 
+            sx={{ 
+              width: isHorizontal ? '168px' : '100%', 
+              height: isHorizontal ? '94px' : 'auto', 
+              aspectRatio: isHorizontal ? 'unset' : '16/9',
+              objectFit: 'cover',
+              borderRadius: '12px' 
+            }} 
+          />
+          <Typography sx={{
+            position: 'absolute',
+            bottom: '8px',
+            right: '8px',
+            backgroundColor: 'rgba(0,0,0,0.8)',
+            color: 'white',
+            padding: '2px 4px',
+            borderRadius: '4px',
+            fontSize: '12px',
+            fontWeight: 500
+          }}>
+            10:00
+          </Typography>
+        </Box>
       </Link>
       <CardContent sx={{ backgroundColor: "transparent", paddingX: 0, paddingY: isHorizontal ? 0 : 1.5, pb: isHorizontal ? 0 : '12px !important' }}>
         <Box display="flex" flexDirection="row" gap={1.5} alignItems="flex-start">

@@ -31,7 +31,8 @@ const Videos = ({ videos, direction }) => {
       columnGap={{ xs: 2, sm: 2, md: 3 }}
       rowGap={{ xs: 4, sm: 4, md: 5 }}
       width="100%"
-      maxWidth="1800px" /* To keep it constrained on ultra-wide monitors */
+      maxWidth="1800px"
+      mx="auto"
     >
       {videos.map((item, idx) => (
         <React.Fragment key={idx}>
