@@ -1,16 +1,61 @@
-# React + Vite
+# Modern YouTube Clone 📺
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, fully responsive, and highly dynamic YouTube Clone application built using modern web development practices. This application mirrors the core experience of YouTube, featuring a custom horizontal category chip row, rounded video thumbnails, and channel avatars for a premium look.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Modern UI/UX**: Completely customized dark theme with beautiful, responsive grid layouts matching the current YouTube design.
+- **Dynamic Categories**: Filter videos by popular categories (Music, Gaming, Coding, NextJS, etc.) using a sleek top-row scrolling chip navigation.
+- **Video Detail Page**: Watch videos directly on the site via an embedded player, alongside related videos and channel metadata.
+- **Channel Detail Page**: View channel profiles, complete with custom gradient banners, subscriber counts, and their uploaded videos.
+- **Search Functionality**: A fully functional search bar to query any content via the YouTube v3 API.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React.js](https://react.dev/) (via Vite for lightning-fast bootstrapping)
+- **Styling**: [Material UI (MUI v5)](https://mui.com/) & Vanilla CSS
+- **Routing**: [React Router v6](https://reactrouter.com/)
+- **Data Fetching**: [Axios](https://axios-http.com/)
+- **Media**: [React Player](https://www.npmjs.com/package/react-player)
+- **API**: [YouTube v3 API (via RapidAPI)](https://rapidapi.com/ytdlfree/api/youtube-v31/)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Salvin-Sebastian/Youtube-Clone.git
+   cd Youtube-Clone
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables:**
+   - Rename `.env.example` to `.env`
+   - Grab your free API key from [RapidAPI YouTube v3](https://rapidapi.com/ytdlfree/api/youtube-v31/).
+   - Add your key to the `.env` file:
+     ```env
+     VITE_APP_RAPID_API_KEY=your_rapidapi_youtube_v3_key_here
+     ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:5173`.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Salvin-Sebastian/Youtube-Clone/issues).
+
+## 📝 License
+
+This project is licensed under the MIT License.
