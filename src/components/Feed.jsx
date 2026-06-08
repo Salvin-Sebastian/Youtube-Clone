@@ -5,12 +5,13 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { Videos, Sidebar, MiniSidebar } from "./";
 
 const Feed = () => {
-  const [selectedCategory, setSelectedCategory] = useState("New");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     setVideos(null);
-    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+    const searchQuery = selectedCategory === "All" ? "New" : selectedCategory;
+    fetchFromAPI(`search?part=snippet&q=${searchQuery}`)
       .then((data) => setVideos(data.items))
       .catch((err) => console.error(err));
   }, [selectedCategory]);
