@@ -22,20 +22,23 @@ const SearchBar = () => {
       onSubmit={handleSubmit}
       sx={{
         borderRadius: 20,
-        border: '1px solid #e3e3e3',
+        border: '1px solid #303030',
         pl: 2,
         boxShadow: 'none',
         mr: { sm: 5 },
+        background: '#121212',
+        display: 'flex',
+        alignItems: 'center',
+        width: { xs: '200px', sm: '350px' }
       }}
     >
       <input
-        className='search-bar'
         placeholder='Search...'
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        style={{ border: 'none', outline: 'none', padding: '10px' }}
+        style={{ border: 'none', outline: 'none', padding: '10px', background: 'transparent', color: 'white', width: '100%' }}
       />
-      <IconButton type='submit' sx={{ p: '10px', color: 'red' }} aria-label='search'>
+      <IconButton type='submit' sx={{ p: '10px', color: '#aaaaaa' }} aria-label='search'>
         <SearchIcon />
       </IconButton>
     </Paper>
