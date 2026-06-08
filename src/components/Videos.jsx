@@ -27,15 +27,17 @@ const Videos = ({ videos, direction }) => {
         sm: "repeat(2, 1fr)",
         md: "repeat(3, 1fr)"
       }}
-      gap={2} 
+      gap={{ xs: 2, sm: 2, md: 3 }} 
+      columnGap={{ xs: 2, sm: 2, md: 3 }}
+      rowGap={{ xs: 4, sm: 4, md: 5 }}
       width="100%"
       maxWidth="1800px" /* To keep it constrained on ultra-wide monitors */
     >
       {videos.map((item, idx) => (
-        <Box key={idx} display="flex" justifyContent="center">
+        <React.Fragment key={idx}>
           {item.id.videoId && <VideoCard video={item} /> }
           {item.id.channelId && <ChannelCard channelDetail={item} />}
-        </Box>
+        </React.Fragment>
       ))}
     </Box>
   );

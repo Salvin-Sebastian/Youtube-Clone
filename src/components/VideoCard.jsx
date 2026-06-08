@@ -32,14 +32,14 @@ const VideoCard = ({ video: { id: { videoId }, snippet }, layout }) => {
           }} 
         />
       </Link>
-      <CardContent sx={{ backgroundColor: "transparent", paddingX: 0, paddingY: isHorizontal ? 0 : 1.5, '&:last-child': { paddingBottom: isHorizontal ? 0 : 1.5 } }}>
-        <Box display="flex" flexDirection="row" gap={1.5}>
+      <CardContent sx={{ backgroundColor: "transparent", paddingX: 0, paddingY: isHorizontal ? 0 : 1.5, pb: isHorizontal ? 0 : '12px !important' }}>
+        <Box display="flex" flexDirection="row" gap={1.5} alignItems="flex-start">
           {!isHorizontal && (
-            <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl} style={{ textDecoration: 'none' }}>
+            <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl} style={{ textDecoration: 'none', flexShrink: 0 }}>
               <Avatar src={demoProfilePicture} sx={{ width: 36, height: 36 }} />
             </Link>
           )}
-          <Box display="flex" flexDirection="column">
+          <Box display="flex" flexDirection="column" overflow="hidden">
             <Link to={videoId ? `/video/${videoId}` : demoVideoUrl } style={{ textDecoration: 'none' }}>
               <Typography variant="subtitle1" fontWeight="500" color="#FFF" lineHeight="1.2" sx={{ 
                 display: '-webkit-box', 
