@@ -84,4 +84,31 @@ body {
 .search-bar input {
   background: transparent;
   color: white;
+  width: 100%;
 }
+
+.search-bar {
+  border: 1px solid #303030;
+  border-radius: 20px;
+  background: #121212;
+  width: 250px;
+}
+
+@media screen and (max-width: 600px) {
+  .search-bar {
+    width: 150px;
+  }
+}
+
+/* React Player Responsiveness */
+.react-player {
+  width: 100% !important;
+  height: 77vh !important;
+}
+
+@media screen and (max-width: 900px) {
+  .react-player {
+    height: 40vh !important;
+  }
+}
+
