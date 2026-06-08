@@ -15,6 +15,7 @@ body {
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -22,43 +23,52 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3f3f3f;
+  background: #717171;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #717171;
+  background: #a1a1a1;
+}
+
+/* Hide scrollbar for category chips */
+.category-container::-webkit-scrollbar {
+  display: none;
+}
+.category-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .category-btn {
-  font-weight: bold;
-  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 14px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   cursor: pointer;
-  background: transparent;
+  background: #272727;
+  color: #f1f1f1;
   outline: none;
   border: none;
-  padding: 7px 15px;
-  margin: 10px 0px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-  color: white;
+  padding: 8px 12px;
+  margin-right: 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
 .category-btn:hover {
-  background-color: #272727 !important;
-  color: white !important;
+  background-color: #3f3f3f;
 }
 
 .category-btn.selected {
-  background-color: #fc1503;
-  color: white;
+  background-color: #f1f1f1;
+  color: #0f0f0f;
 }
 
 .category-btn.selected:hover {
-  background-color: #fc1503 !important;
+  background-color: #ffffff;
 }
 
 .search-bar {
