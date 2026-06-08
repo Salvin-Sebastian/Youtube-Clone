@@ -24,7 +24,8 @@ const Videos = ({ videos, direction }) => {
       display="grid" 
       gridTemplateColumns={{
         xs: "1fr",
-        sm: "repeat(auto-fill, minmax(320px, 1fr))"
+        sm: "repeat(2, 1fr)",
+        md: "repeat(3, 1fr)"
       }}
       gap={2} 
       width="100%"
